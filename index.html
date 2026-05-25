@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+  content="width=device-width, initial-scale=1.0">
+
+  <title>VortexCart</title>
+
+  <link rel="stylesheet"
+  href="style.css">
+
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+</head>
+
+<body>
+
+  <!-- Notification -->
+
+  <div class="notification"
+  id="notification">
+
+    Product Added To Cart!
+
+  </div>
+
+  <!-- Navbar -->
+
+  <nav>
+
+    <div class="logo">
+      VortexCart
+    </div>
+
+    <!-- Mobile Menu -->
+
+    <div class="menu-btn"
+    id="menuBtn">
+
+      <i class="fa-solid fa-bars"></i>
+
+    </div>
+
+    <!-- Nav Links -->
+
+    <div class="nav-links"
+    id="navLinks">
+
+      <a href="#">Home</a>
+
+      <a href="#products">
+        Products
+      </a>
+
+      <a href="#about">
+        About Us
+      </a>
+
+      <a href="#contact">
+        Contact
+      </a>
+
+    </div>
+
+    <!-- Search -->
+
+    <div class="search-box">
+
+      <input type="text"
+      id="searchInput"
+      placeholder="Search products...">
+
+    </div>
+
+    <!-- Icons -->
+
+    <div class="icons">
+
+      <i class="fa-solid fa-heart"></i>
+
+      <i class="fa-solid fa-user"></i>
+
+      <i class="fa-solid fa-cart-shopping"
+      id="cartIcon"></i>
+
+    </div>
+
+  </nav>
+
+  <!-- Hero -->
+
+  <section class="hero">
+
+    <div class="circle circle1"></div>
+
+    <div class="circle circle2"></div>
+
+    <h1>
+      Future Shopping Starts Here
+    </h1>
+
+    <p>
+      Explore premium gaming, fashion,
+      watches and tech products.
+    </p>
+
+    <button>
+      Shop Now
+    </button>
+
+  </section>
+
+  <!-- Categories -->
+
+  <section class="categories">
+
+    <h2>Categories</h2>
+
+    <div class="category-buttons">
+
+      <button onclick="filterProducts('all')">
+        All
+      </button>
+
+      <button onclick="filterProducts('gaming')">
+        Gaming
+      </button>
+
+      <button onclick="filterProducts('tech')">
+        Tech
+      </button>
+
+      <button onclick="filterProducts('watch')">
+        Watches
+      </button>
+
+      <button onclick="filterProducts('fashion')">
+        Fashion
+      </button>
+
+    </div>
+
+  </section>
+
+  <!-- Products -->
+
+  <section class="products"
+  id="products">
+
+    <h2>Featured Products</h2>
+
+    <div class="product-grid">
+
+      <!-- GAMING -->
+
+      <div class="product-card gaming"
+      data-name="Gaming Mouse">
+
+        <img src="https://images.unsplash.com/photo-1527814050087-3793815479db?q=80&w=1000&auto=format&fit=crop">
+
+        <h3>Gaming Mouse</h3>
+
+        <div class="price">$80</div>
+
+        <div class="rating">
+          ⭐⭐⭐⭐⭐
+        </div>
+
+        <button class="wishlist">
+          ❤️ Wishlist
+        </button>
+
+        <button onclick="addToCart('Gaming Mouse',80)">
+          Add To Cart
+        </button>
+
+      </div>
+
+      <div class="product-card gaming"
+      data-name="Gaming Chair">
+
+        <img src="https://images.unsplash.com/photo-1598550476439-6847785fcea6?q=80&w=1000&auto=format&fit=crop">
+
+        <h3>Gaming Chair</h3>
+
+        <div class="price">$250</div>
+
+        <div class="rating">
+          ⭐⭐⭐⭐⭐
+        </div>
+
+        <button class="wishlist">
+          ❤️ Wishlist
+        </button>
+
+        <button onclick="addToCart('Gaming Chair',250)">
+          Add To Cart
+        </button>
+
+      </div>
+
+      <!-- TECH -->
+
+      <div class="product-card tech"
+      data-name="Laptop">
+
+        <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?q=80&w=1000&auto=format&fit=crop">
+
+        <h3>Laptop</h3>
+
+        <div class="price">$950</div>
+
+        <div class="rating">
+          ⭐⭐⭐⭐⭐
+        </div>
+
+        <button class="wishlist">
+          ❤️ Wishlist
+        </button>
+
+        <button onclick="addToCart('Laptop',950)">
+          Add To Cart
+        </button>
+
+      </div>
+
+      <div class="product-card tech"
+      data-name="Camera">
+
+        <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=1000&auto=format&fit=crop">
+
+        <h3>Camera</h3>
+
+        <div class="price">$700</div>
+
+        <div class="rating">
+          ⭐⭐⭐⭐⭐
+        </div>
+
+        <button class="wishlist">
+          ❤️ Wishlist
+        </button>
+
+        <button onclick="addToCart('Camera',700)">
+          Add To Cart
+        </button>
+
+      </div>
+
+      <!-- WATCH -->
+
+      <div class="product-card watch"
+      data-name="Smart Watch">
+
+        <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?q=80&w=1000&auto=format&fit=crop">
+
+        <h3>Smart Watch</h3>
+
+        <div class="price">$90</div>
+
+        <div class="rating">
+          ⭐⭐⭐⭐
+        </div>
+
+        <button class="wishlist">
+          ❤️ Wishlist
+        </button>
+
+        <button onclick="addToCart('Smart Watch',90)">
+          Add To Cart
+        </button>
+
+      </div>
+
+      <div class="product-card watch"
+      data-name="Luxury Watch">
+
+        <img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?q=80&w=1000&auto=format&fit=crop">
+
+        <h3>Luxury Watch</h3>
+
+        <div class="price">$400</div>
+
+        <div class="rating">
+          ⭐⭐⭐⭐⭐
+        </div>
+
+        <button class="wishlist">
+          ❤️ Wishlist
+        </button>
+
+        <button onclick="addToCart('Luxury Watch',400)">
+          Add To Cart
+        </button>
+
+      </div>
+
+      <!-- FASHION -->
+
+      <div class="product-card fashion"
+      data-name="Sneakers">
+
+        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=1000&auto=format&fit=crop">
+
+        <h3>Sneakers</h3>
+
+        <div class="price">$110</div>
+
+        <div class="rating">
+          ⭐⭐⭐⭐
+        </div>
+
+        <button class="wishlist">
+          ❤️ Wishlist
+        </button>
+
+        <button onclick="addToCart('Sneakers',110)">
+          Add To Cart
+        </button>
+
+      </div>
+
+      <div class="product-card fashion"
+      data-name="Hoodie">
+
+        <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=1000&auto=format&fit=crop">
+
+        <h3>Hoodie</h3>
+
+        <div class="price">$70</div>
+
+        <div class="rating">
+          ⭐⭐⭐⭐⭐
+        </div>
+
+        <button class="wishlist">
+          ❤️ Wishlist
+        </button>
+
+        <button onclick="addToCart('Hoodie',70)">
+          Add To Cart
+        </button>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- About -->
+
+  <section class="about"
+  id="about">
+
+    <h2>About Us</h2>
+
+    <p>
+
+      VortexCart is a futuristic e-commerce
+      website project designed and developed
+      by Rayyan ahmed.
+
+      <br><br>
+
+      This project was built using:
+
+      <br><br>
+
+      HTML for structure,
+      CSS for styling and animations,
+      and JavaScript for functionality.
+
+      <br><br>
+
+      Features include:
+
+      <br>
+
+      ✔ Responsive Mobile Design  
+      ✔ Product Categories  
+      ✔ Shopping Cart  
+      ✔ Search System  
+      ✔ Wishlist Buttons  
+      ✔ Product Filtering  
+      ✔ Smooth Animations  
+      ✔ Modern UI Design
+
+      <br><br>
+
+      VortexCart was created as a frontend
+      and backend learning project to practice
+      real-world web development skills.
+
+    </p>
+
+  </section>
+
+  <!-- Cart Sidebar -->
+
+  <div class="cart-sidebar"
+  id="cartSidebar">
+
+    <h2>Your Cart</h2>
+
+    <div id="cartItems"></div>
+
+    <div class="total"
+    id="totalPrice">
+
+      Total: $0
+
+    </div>
+
+    <button class="checkout">
+      Checkout
+    </button>
+
+  </div>
+
+  <!-- Footer -->
+
+  <footer id="contact">
+
+    <p>
+      Designed By Rayyan ahmed ✨
+    </p>
+
+  </footer>
+
+  <script src="script.js" defer></script>
+
+</body>
+</html>
